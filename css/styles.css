@@ -478,6 +478,72 @@ img {
   fill: #f4f4fd;
 }
 
+.footer-form {
+  display: inline-block;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.subscribe-label {
+  background-color: #2e2f42;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-label::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.subscribe-label:hover {
+  background-color: #31d0aa;
+}
+
+.button-subscribe {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  color: #fff;
+  background-color: #4d5ae5;
+  padding: 8px 24px;
+  width: 165px;
+  margin: auto;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: #31d0aa;
+}
+
+.subscribe-icon {
+  fill: #fff;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -623,7 +689,7 @@ img {
 .comment-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
@@ -633,17 +699,22 @@ img {
 }
 
 .custom-checkbox {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  margin-right: 8px;
   height: 16px;
   width: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  fill: transparent;
+  transition: fill 250ms ease, background-color 250ms ease;
 }
 
-.polisy-checkbox:checked {
-  width: 20px;
-  height: 20px;
+.polisy-checkbox:checked + .label-polisy > .custom-checkbox {
+  background-color: #4d5ae5;
+  fill: #fafafa;
 }
 
 .label-polisy {
